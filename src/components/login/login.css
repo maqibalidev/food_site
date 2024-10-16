@@ -1,0 +1,16 @@
+.reg-input-container{
+    height: 60px !important;
+    margin-bottom:5px !important;
+p{
+    font-size: 12px !important;
+}
+}
+.loader-overlay{
+    background-color: rgba(0, 0, 0, 0.315);
+    position: absolute;
+    width: 100vw;
+
+  .loader-container{
+    border-radius: 10px !important;
+  }
+}

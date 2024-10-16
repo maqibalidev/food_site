@@ -1,0 +1,116 @@
+.footer-item{
+min-width: 120px !important;
+a:hover{
+    color: black;
+}
+    a{
+       
+        width: fit-content !important;
+        text-decoration: none !important;
+        color: rgb(122, 122, 122) !important;
+        font-size: 12px !important;
+       margin-top: 5px !important;
+       font-weight: 600;
+    }
+    a:hover{
+        color: black !important;
+    }
+    h5{
+       height: 20px !important;
+       font-size: 16px !important;
+       
+        font-weight: 700;
+    }
+}
+
+.footer-item:last-child{
+p{
+    color: rgb(122, 122, 122) !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 10px !important;
+}
+    flex: 1 !important;
+}
+.footer-container{
+img{
+    height: 50px !important;
+}
+    .footer-form-container{
+form{
+    input{
+        background-color: rgba(0, 0, 0, 0.041) ;
+        border: none;
+        box-shadow: none;
+  
+    padding: 0 20px !important;
+    }
+    input::placeholder{
+     font-size: 14px !important;
+
+    }
+
+    button{
+        box-shadow: none !important;
+        border-top-left-radius: 0;
+        font-size: 12px !important;
+        padding: 0 10px !important;
+        height: 30px !important;
+        border-bottom-left-radius: 0;
+    }
+}
+
+p{
+    line-height: 22px !important;
+}
+
+
+    }
+
+
+}
+
+@media screen and (max-width:576px) {
+    .footer-item{
+    h5{
+       font-size: 16px !important;
+    }
+    a{
+       
+    
+        font-size: 12px !important;
+      
+    }
+}
+}
+
+.footer-bottom-container{
+
+
+p{
+    color: rgb(128, 128, 128) !important;
+    font-weight: 400;
+    font-size: 12px !important;
+}
+a{
+    color: rgb(75, 75, 75) !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+}
+
+.footer-icons-container{
+height: 28px !important;
+width: 28px !important;
+border: 1px solid rgba(0, 0, 0, 0.13) !important;
+border-radius: 5px !important;
+}
+
+.footer-icons-container:hover{
+
+background-color: rgba(0, 0, 0, 0.075) !important;
+
+    
+    }

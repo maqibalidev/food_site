@@ -1,0 +1,94 @@
+.blog-container {
+    padding: 10px !important;
+    box-shadow: -1px 1px 5px 0px #00000017;
+    border-radius: 8px;
+flex: 1;
+height: fit-content !important;
+min-width: 280px !important;
+
+margin: 0 10px !important;
+    transition: 0.5s all ease;
+    transform-origin: top; 
+ .viewProducts-btn{
+  line-height: 0px !important;
+height: 30px !important;
+padding: 0px 10px !important;
+  border-radius: 8px !important;
+  background-color: #3dbb5d !important;
+  border: none !important;
+  font-size: 14px !important;
+ }
+ h5{
+  font-weight: 700 !important;
+ }
+  }
+  .blog-container:first{
+    margin-left: 0px !important;
+  }
+  .blog-container:last-child{
+     margin-left: 0px !important;
+  }
+  .blog-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 160px !important;
+  }
+  
+  .blog-container p {
+    color: rgb(102, 102, 102);
+    
+  }
+  
+  .blog-container .banner-small-txt {
+    font-size: 12px !important;
+  }
+  
+  .blog-container .blog-desc {
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:5.2rem !important;
+    line-height: 30px !important;
+    font-size: 14px !important;
+    font-weight:400;
+  }
+  
+  /* Only apply hover effect to the specific blog-container being hovered */
+  .blog-container:hover {
+    transform: scale(1.01); 
+  }
+
+  @media screen and (max-width:768px) {
+    .blog-container {
+      margin: 0px !important;
+    }
+  }
+@media screen and (max-width:768px) {
+    .blog-container {
+        padding: 10px !important;
+        box-shadow: -1px 1px 10px 0px #00000017;
+        border-radius: 8px;
+        min-width: 100% !important;
+        transition: 0.5s all ease;
+        transform-origin: top; 
+      }
+      .blog-container img {
+        width: 100%;
+        object-fit: cover;
+        height: 160px !important;
+      }
+      
+}
+
+@media screen and (max-width:980px) {
+
+    .blog-container {
+
+        max-width: 350px !important;
+
+    }
+
+}

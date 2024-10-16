@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* Keyframes for the shaky animation */
+@keyframes shake {
+    0%{
+      transform: translate(-200%, -50%) translateY(0);
+    }
+    25% {
+      transform: translate(-200%, -50%) translateY(-10px);
+    }
+    50%{
+        transform: translate(-200%, -50%) translateY(10px);
+    }
+    75%{
+        transform: translate(-200%, -50%) translateY(-10px);
+    }
+    100%{
+        transform: translate(-200%, -50%) translateY(0);
+    }
+  }
+  
+  /* Custom Beacon Style */
+  .custom-beacon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: #FF9800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    animation: shake 1s ease-in-out infinite alternate-reverse; 
+animation-duration: 1s;
+  }
+  

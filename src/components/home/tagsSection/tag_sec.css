@@ -1,0 +1,22 @@
+.tag-container{
+user-select: none !important;
+    li{
+        list-style: none;
+        margin-top: 12px !important;
+    }
+a{
+    text-decoration: none;
+    color: rgb(129, 129, 129) !important;
+    border-radius: 5px !important;
+    background-color: rgba(253, 207, 0, 0.082) !important;
+    cursor: pointer;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    padding: 7px 10px !important;
+}
+
+a:hover{
+    background-color: rgba(253, 207, 0, 0.336) !important;
+}
+}
+

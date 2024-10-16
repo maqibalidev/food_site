@@ -1,0 +1,85 @@
+.register-form-container{
+    padding: 10px !important;
+    background: 
+    linear-gradient(to right,rgba(0, 0, 0, 0.26),rgba(2, 2, 2, 0)),
+    url("https://th.bing.com/th/id/R.6d0ae138e4954f60085d228e3cbbc48d?rik=W5M5MwcxK4T2Pw&pid=ImgRaw&r=0");
+    background-repeat: no-repeat;
+    background-size: cover;
+min-height: 220px !important;
+p{
+    font-size: 12px !important;
+}
+input{
+    max-width: 580px !important;
+    height: 30px !important;
+    padding: 0px 10px !important;
+    font-size: 14px !important;
+}
+input::placeholder{
+    font-size: 12px !important;
+    font-weight: 600;
+}
+input:focus{
+    border: none !important;
+}
+input::placeholder{
+    color: rgb(121, 121, 121) !important;
+    font-weight: 400;
+}
+button{
+    padding: 0px 10px !important;
+    height: 30px !important;
+    max-width: 600px !important;   
+    font-size: 14px !important;
+}
+input:focus{
+    box-shadow: none !important;
+}
+button:focus{
+    box-shadow: none !important;
+}
+}
+
+@media screen and (max-width: 576px) {
+    .register-form-container{
+
+      form{
+        width: 100% !important;
+      }
+    }}
+    @media screen and (max-width: 768px) {
+        h2{
+            font-size: 18px !important;
+        }
+        p{
+            font-size: 8px !important;
+        }
+     
+        
+    } 
+    .contact-sec{
+        button{
+            font-size: 12px !important;
+        }
+    }
+/* @media screen and (max-width: 980px) {
+
+    .register-form-container{
+
+h1{
+    font-size: 24px !important;
+}
+p{
+    font-size: 12px !important;
+}
+
+    }
+    
+}
+
+
+
+
+
+ */
+    

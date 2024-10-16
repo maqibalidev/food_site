@@ -1,0 +1,108 @@
+.offer-left-img-container{
+
+    background: 
+    linear-gradient(to right,rgba(0, 0, 0, 0.26),rgba(255, 255, 255, 0)),
+    url("https://tirupatibalajienterprise.com/tbe/img/banner-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+padding-left: 35px !important;
+    height: 350px !important; 
+    overflow-x: hidden !important;
+
+     flex: 1 !important;
+      position: relative;
+      display: flex; 
+      flex-direction: column;
+    justify-content: center;
+   user-select: none !important;
+
+   button{
+    border-radius: 0px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384) !important;
+   font-size: 12px !important;
+    transition: .5s all ease;
+    font-weight: 700px !important;
+    margin-top: 15px !important;
+   }
+
+
+   p{
+    font-size: 14px !important;
+   }
+
+   button:hover{
+    
+    border: 1px solid rgb(255, 255, 255) !important;
+   }
+
+}
+
+.offer-right-img-container:first-child{
+  
+    background:
+      linear-gradient(to right,rgba(0, 0, 0, 0.24),rgba(255, 255, 255, 0)),
+    url("https://image.slidesdocs.com/responsive-images/background/captivating-texture-of-fresh-red-tomatoes-an-up-close-view-powerpoint-background_12e37c34d2__960_540.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.offer-right-img-container:last-child{
+  
+    background:
+      linear-gradient(to right,rgba(0, 0, 0, 0.24),rgba(255, 255, 255, 0)),
+    url("https://th.bing.com/th/id/OIP.wh-GIJcSEv0qUwEM9mCwIgHaEJ?rs=1&pid=ImgDetMain");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.offer-right-img-container{
+    padding-left: 35px !important;
+ 
+flex: 1;
+   
+      position: relative;
+      display: flex; 
+      flex-direction: column;
+    justify-content: center;
+   user-select: none !important;
+
+
+   button{
+    margin-top: 16px !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384) !important;
+   font-size: 12px !important;
+    transition: .5s all ease;
+    font-weight: 700px !important;
+   }
+
+
+   p{
+    font-size: 12px !important;
+   }
+
+   button:hover{
+    
+    border: 1px solid rgb(255, 255, 255) !important;
+   }
+}
+.offer-right-container{
+flex: 1 !important;
+
+justify-content: space-between;
+
+}
+
+
+@media screen and (max-width: 576px) {
+    .offer-left-img-container{
+     
+        min-height: 200px !important;
+ 
+    }
+
+    .offer-right-img-container{
+         
+        min-height: 200px !important;
+    }
+
+}
+

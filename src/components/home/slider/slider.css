@@ -1,0 +1,105 @@
+.slider-img-container {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 200px !important;
+  overflow: hidden;
+}
+.slider-container{
+  h4{
+    font-weight: 600 !important;
+  }
+    
+}
+.slider-img-container img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover;
+}
+.slider-btn-arrow{
+
+fill:rgb(97, 97, 97) !important;
+
+}
+.slider-container p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 2em;
+  font-size: 14px !important;
+  color: #6e6e6e !important;
+  font-weight: 500 !important;
+}
+
+.custom-prev,
+.custom-next {
+ 
+  height: 30px;
+  width: 30px;
+  background-color: #f0f0f0 !important;
+  border: none !important;
+ 
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.048);
+}
+
+.custom-prev:focus,
+.custom-next:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.custom-prev {
+  right: 70px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: #3dbb5d !important;
+.slider-btn-arrow{
+  fill: white !important;
+}
+}
+.slider-title{
+  line-height: 0px !important;
+}
+.swiper-button-disabled {
+  background-color: #b1b1b1 !important;
+  color: #aaa !important;
+  cursor: not-allowed !important;
+  opacity: 0.2 !important;
+}
+
+.viewProducts-btn {
+line-height: 0px !important;
+height: 30px !important;
+padding: 0px 10px !important;
+  border-radius: 8px !important;
+  background-color: #3dbb5d !important;
+  border: none !important;
+  font-size: 14px !important;
+}
+.mySwiper{
+  padding: 0px 10px !important;
+
+}
+.mySwiper .swiper-slide {
+  display: flex;
+  margin-left: 0px !important;
+  padding: 20px 10px !important;
+  justify-content: center; /* Center the content inside the slide */
+}
+
+@media screen and (max-width: 576px) {
+  .mySwiper .swiper-slide {
+    max-width: 100% !important;
+   
+  }
+}
