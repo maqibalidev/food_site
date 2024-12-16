@@ -1,7 +1,7 @@
 import axios from "axios";
-const API_URL=process.env.BACKEND_API_URL;
 const API = axios.create({
-  baseURL: API_URL,
+
+  baseURL: process.env.REACT_APP_BACKEND_API_URL,
   timeout: 50000,});
 
 export const loginApi = (values) => {
@@ -19,5 +19,6 @@ export const logoutApi = (token) => {
 };
 
 export const getProductsApi = () => {
+ 
   return API.get("products");
 };
