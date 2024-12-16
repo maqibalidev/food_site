@@ -19,6 +19,6 @@ export const logoutApi = (token) => {
 };
 
 export const getProductsApi = () => {
- 
+
   return API.get("products");
 };

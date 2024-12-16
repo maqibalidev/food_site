@@ -28,6 +28,7 @@ const fetchProducts = async()=>{
 
  try {
   const data = await getProductsApi();
+  console.log(data)
   setProductData(data.data.products)
 
  } catch (error) {
