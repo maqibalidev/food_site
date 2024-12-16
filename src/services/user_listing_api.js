@@ -1,7 +1,7 @@
 import axios from "axios";
-
+const API_URL=process.env.BACKEND_API_URL;
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/",
+  baseURL: API_URL,
   timeout: 50000,});
 
 export const loginApi = (values) => {
