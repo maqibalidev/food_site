@@ -7,6 +7,7 @@ import "swiper/css/autoplay"; // Import the autoplay CSS
 import { Autoplay, Navigation } from "swiper/modules";
 import Product from "../product/Product";
 import ProductLoader from "../Product_loader/ProductLoader";
+import ImageComponent from "../../../includes/ImageComponent";
 
 export default function CustomSlider({ slider_type, slider_class, title ,data}) {
   return (
@@ -90,9 +91,11 @@ export default function CustomSlider({ slider_type, slider_class, title ,data}) 
             <SwiperSlide key={key}>
               <div className=" slider-container d-flex flex-column align-items-center">
                 <div className=" slider-img-container d-flex flex-column align-items-center">
-                  <img
+                  <ImageComponent
                     src={product.img}
-                    alt=""
+                    width={120}
+                    height={120}
+                    rounded={200}
                   />
                 </div>
                 <p className="mt-2">{product.name}</p>

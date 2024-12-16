@@ -14,6 +14,7 @@ user-select: none !important;
 }
 img{
     height: 150px !important;
+    max-width: 200px;
     mix-blend-mode: multiply;
 }
 

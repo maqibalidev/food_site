@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../includes/contexts/authContext/AuthContext";
 import { jwtDecode } from "jwt-decode";
+import { loginApi } from "../../services/user_listing_api";
 
 const Login = () => {
   const authContext = useContext(AuthContext);
@@ -40,37 +41,32 @@ const Login = () => {
     validateOnChange: true,
     validateOnBlur: true,
     validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: (values) => {
       setLoading(true);
       const formdata = new FormData();
       formdata.append("email", values.email);
       formdata.append("password", values.password);
 
-      try {
-        const res = await axios.post(
-          "http://127.0.0.1:8000/api/login",
-          formdata
-        );
-
-        if (res.status === 200) {
+       loginApi(formdata)
+        .then((res) => {
           const { name, email, id, access_token } = res.data;
-          authContext.dispatch({
-            type: "LOGIN",
-            payload: { name, email, id, authToken: access_token },
-          });
-
-          toast.success("User logged in successfully!", {onClose: () => {navigate("/")}});
-        }
-      } catch (error) {
-        if (error.status === 401) {
-          toast.error("Invalid email or password!");
-        }
-        else{
-          toast.error("Something went wrong, try again!");
-        }
-      } finally {
-        setLoading(false);
-      }
+            authContext.dispatch({
+              type: "LOGIN",
+              payload: { name, email, id, authToken: access_token },
+            });
+          toast.success("User logged in successfully!", { onClose: () => {navigate("/")}})
+         
+        })
+        .catch((error) => {
+          if (error.status === 401) {
+            toast.error("Invalid email or password!");
+          } else {
+            toast.error("Something went wrong, try again!");
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     },
   });
 

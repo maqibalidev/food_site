@@ -1,0 +1,60 @@
+/* Ensuring specificity for overriding React Datepicker styles */
+.custom-datepicker {
+  background-color: #ffffff !important; /* Example: Changing background */
+  border-radius: 12px !important;
+  color: rgba(0, 0, 0, 0.486);
+  border:1px solid rgb(0, 0, 0);
+  padding: 10px !important;
+ 
+}
+.custom-datepicker:focus {
+
+  border:1px solid rgb(0, 0, 0) !important;
+
+}
+.react-datepicker__day--in-range {
+  background-color: #e42828 !important;  /* Same as selected */
+  color: white !important; /* Text color for in-range days */
+}
+.react-datepicker__day--selected {
+  background-color: #e42828 !important; /* Tomato color for selected date */
+  color: rgb(255, 255, 255) !important;
+  
+
+}
+
+.react-datepicker__header {
+  background-color: #ffffff4d !important; /* Header color change */
+  color: rgb(0, 0, 0) !important;
+  padding: 10px !important;
+}
+
+
+.react-datepicker__day:hover,
+.react-datepicker__day--keyboard-selected {
+  background-color: #e42828 !important; /* Tooltip background color */
+  color: #ffffff; /* Tooltip text color */
+}
+
+.react-datepicker__day {
+  margin: 1px !important; /* Adjust for desired spacing between dates */
+}
+
+.react-datepicker__month {
+  margin: 2px !important; /* Adjust for desired spacing between dates */
+}
+
+
+.react-datepicker {
+ 
+  padding: 0px !important; /* Adjust this value as needed for padding */
+}
+.react-datepicker__time-input {
+  background-color: red !important;
+  margin-top: 5px; /* Space between label and input */
+}
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+  margin-right: 10px !important; /* Space between dropdowns, adjust value as needed */
+}
+

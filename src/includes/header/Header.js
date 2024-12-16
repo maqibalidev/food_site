@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import "./header.css";
 import logo from "../../assets/images/3.png";
 import { CartContext } from "../contexts/cartContextApi/cartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const cartContext = useContext(CartContext);
   const [active, setActive] = useState(false);
@@ -11,12 +11,13 @@ const Header = () => {
   const [page, setPage] = useState("HOME");
   const [pageOption, setpageOption] = useState("PAGES");
   const pageOptionsRef = useRef(null);
-
+const navigate = useNavigate();
   const handleToggle = () => {
     !active && setActive(true);
   };
 
   const optionClick = (page, e) => {
+    
     setShowPageoptions(false);
 
     if (window.screen.width < 766) {
@@ -177,30 +178,33 @@ const Header = () => {
                               className="page-option-container"
                               ref={pageOptionsRef}
                             >
-                              <div
+                              <Link
+                             
                                 className={`page-option ${
                                   page === "HOME" && "page-option-active"
                                 }`}
                                 onClick={(e) => optionClick("HOME", e)}
                               >
                                 HOME
-                              </div>
-                              <div
+                              </Link>
+                              <Link
+                                
                                 className={`page-option ${
                                   page === "ABOUT" && "page-option-active"
                                 }`}
                                 onClick={(e) => optionClick("ABOUT", e)}
                               >
                                 ABOUT
-                              </div>
-                              <div
+                              </Link>
+                              <Link
+                               
                                 className={`page-option ${
                                   page === "CONTACT" && "page-option-active"
                                 }`}
                                 onClick={(e) => optionClick("CONTACT", e)}
                               >
                                 CONTACT
-                              </div>
+                              </Link>
                             </div>
                           )}
                         </div>

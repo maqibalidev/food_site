@@ -5,6 +5,7 @@ import "./register.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import { registerApi } from "../../services/user_listing_api";
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -57,23 +58,17 @@ const Register = () => {
       formdata.append("password_confirmation", values.password_confirmation);
 
       try {
-        const res = await axios.post(
-          "http://127.0.0.1:8000/api/register",
-          formdata,
-          { headers: { "Content-Type": "'application/json" } }
-        );
-
-        if (res.data.status === 200) {
-        
-
-          toast.success("User registered in successfully!", { onClose: () => { navigate("/login");}});
-        } else {
-          toast.error("Failed to register user!");
-        }
+        await registerApi(formdata);
+        toast.success("User registered in successfully!", {
+          onClose: () => {
+            navigate("/login");
+          },
+        });
       } catch (error) {
         toast.error("Something went wrong, try again!");
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     },
   });
 
@@ -155,7 +150,7 @@ const Register = () => {
         >
           REGISTER
         </button>
-        <Link to={'/login'}>Already have an account? GOTO LOGIN</Link>
+        <Link to={"/login"}>Already have an account? GOTO LOGIN</Link>
       </form>
     </div>
   );

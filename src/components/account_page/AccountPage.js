@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../includes/contexts/authContext/AuthContext";
 import { useNavigate } from "react-router-dom";
 import logout from "../helpers/logout";
-
+import Header from '../../includes/header/Header'
 const AccountPage = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -19,6 +19,7 @@ const AccountPage = () => {
 
   return (
     <div className="vh-100">
+      <Header/>
       {loading && (
         <div className="loader-overlay d-flex vh-100 align-items-center justify-content-center">
           <div class="loader-container d-flex justify-content-center align-items-center px-5 py-4 bg-light">

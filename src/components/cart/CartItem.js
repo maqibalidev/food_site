@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../includes/contexts/cartContextApi/cartContext';
+import ImageComponent from '../../includes/ImageComponent';
 
 const CartItem = ({product}) => {
     const [count, setCount] = useState(product.quantity);
@@ -15,9 +16,11 @@ const removeProduct = ()=>{
 
   return (
     <div className="product-container d-flex align-items-center flex-column position-relative">
-      <img
+      <ImageComponent
         src={product.image}
-        alt=""
+        height={150}
+        width={200}
+
       />
       <p className="product-desc mt-2 text-center">{product.name}</p>
     

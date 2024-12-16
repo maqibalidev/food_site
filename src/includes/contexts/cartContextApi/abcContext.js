@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-const INITIAL_STATE = JSON.parse(localStorage.getItem("cartData")) || { id: null,name: "",address: null};
+let INITIAL_STATE = JSON.parse(localStorage.getItem("cartData")) || { id: null,name: "",address: null};
 const productReducer = (state, action) => {
   switch (action.type) {
     case "ADD": {

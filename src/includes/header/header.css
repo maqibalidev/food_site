@@ -29,7 +29,7 @@ border-radius: 20px;
 
 
 .header-container{
- 
+ border-bottom: 1px solid rgba(0, 0, 0, 0.068);
   user-select: none;
   position: relative !important;
 /* 
@@ -393,6 +393,8 @@ z-index: 99;
       top: 30px !important;
       box-shadow: 0px 2px 6px 0px #00000045;
       left: 5px;
+      display: flex;
+      flex-direction: column;
      overflow: hidden;
 
               color: #6d6767;
@@ -400,12 +402,15 @@ z-index: 99;
       border-radius: 8px;
       z-index: 999 !important;
    
-      width: 130px !important;
+      width: 150px !important;
       /* left: 70%; */
       font-size: 12px;
       overflow: hidden;
-    .page-option{
 
+
+
+    .page-option{
+text-decoration: none;
       padding: 8px 10px !important;
       border-bottom: 1px solid #ffc10756;
       color: #6d6767;

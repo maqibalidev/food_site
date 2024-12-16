@@ -5,6 +5,7 @@ import logout from "./logout";
 import { jwtDecode } from "jwt-decode";
 import { AuthContext } from "../../includes/contexts/authContext/AuthContext";
 import { toast } from "react-toastify";
+import Test from "../test/Test";
 const HomePage = lazy(() => import("../home/HomePage"));
 const ProductCart = lazy(() => import("../cart/ProductCart"));
 const Register = lazy(() => import("../register/Register"));
@@ -17,7 +18,7 @@ export const Root = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-const checkAuth= async()=>{
+const checkAuth=()=>{
     const { authToken } = authContext?.data;
    if (authToken) {
    try {
@@ -57,6 +58,7 @@ const checkAuth= async()=>{
         <Route path="/account" element={<AccountPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/test" element={<Test />} />
         {/* <Route path="*" element={<_404Page/>} /> */}
       </Routes>
     </Suspense>

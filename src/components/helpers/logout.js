@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { logoutApi } from "../../services/user_listing_api";
 
 const logout = async (authContext) => {
 
@@ -8,10 +8,7 @@ const logout = async (authContext) => {
 
   try {
     const { authToken } = authContext?.data;
-    const res = await axios.post(
-      'http://127.0.0.1:8000/api/logout', {},{
-        headers: { Authorization: `Bearer ${authToken}` },
-      });
+    const res = await logoutApi(authToken)
 
     if (res.status === 200) {
       authContext.dispatch({ type: "LOGOUT" }); 

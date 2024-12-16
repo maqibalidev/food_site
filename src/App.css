@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  box-sizing: border-box !important
 }
-
+.toast-class {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

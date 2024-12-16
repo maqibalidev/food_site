@@ -17,6 +17,8 @@ import Joyride, { STATUS } from "react-joyride";
 
 import MyComponent from "../../includes/tour";
 import axios from "axios";
+import { getProductsApi } from "../../services/user_listing_api";
+import { toast } from "react-toastify";
 
 const HomePage = () => {
 const [productData,setProductData] = useState([])
@@ -25,17 +27,12 @@ useEffect(()=>{
 const fetchProducts = async()=>{
 
  try {
-  const data = await axios.get('http://localhost:8000/api/products');
-
-  if (data.status === 200) {
-    setProductData(data.data.products)
-  }
-  else{
-    console.log('failed to get products')
-  }
+  const data = await getProductsApi();
+  setProductData(data.data.products)
 
  } catch (error) {
   console.log(error)
+  toast.error('network error!');
  }
 
 

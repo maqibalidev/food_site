@@ -2,13 +2,16 @@ import React from 'react'
 import './product_section.css'
 import Product from '../product/Product'
 import ProductLoader from '../Product_loader/ProductLoader'
+import Header from '../../includes/header/Header'
 
 const Cart = () => {
 
 const data  = JSON.parse(localStorage.getItem('cartData'));
 
   return (
-    <div className='mt-5'>
+  <>
+
+  <div className='mt-5'>
          <div className="d-flex justify-content-between mb-5 ">
         <h4>Best selling products</h4>
         <div>
@@ -44,6 +47,7 @@ const data  = JSON.parse(localStorage.getItem('cartData'));
 </div>
 
     </div>
+  </>
   )
 }
 
